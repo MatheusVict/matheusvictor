@@ -1,9 +1,15 @@
-import { Container } from './styles';
+import { Container, TextContainer } from './styles';
 
 export function HomeHero() {
   return (
     <Container>
-      <h1>HomeHero</h1>
+      <img src="/pessoa.webp" alt="minha foto" />
+      <div>
+        <TextContainer>
+          <h1>Olá</h1>
+          <h2>Me chamo Matheus</h2>
+        </TextContainer>
+      </div>
     </Container>
   );
 }

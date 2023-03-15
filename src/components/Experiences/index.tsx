@@ -1,5 +1,5 @@
-import { ExperiencesItems } from '../components/ExperiencesItems';
-import { SectionTitle } from '../components/SectionTitle';
+import { ExperiencesItems } from './ExperiencesItems';
+import { SectionTitle } from '../SectionTitle';
 import { Container } from './styles';
 
 export function Experiences() {

@@ -1,7 +1,7 @@
 import { HomeContainer } from '../styles/HomeStyles';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
-import { Experiences } from '../Experiences';
+import { Experiences } from '../components/Experiences';
 import { Projects } from '../components/Projects';
 import { Knowledge } from '../components/Knowledge';
 

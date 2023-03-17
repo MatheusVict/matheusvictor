@@ -2,7 +2,7 @@ import { CodeItem, Container, InfosContainer, TextContainer } from './styles';
 
 export function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <img src="/pessoa.webp" alt="minha foto" />
       <div>
         <TextContainer>
@@ -10,7 +10,7 @@ export function HomeHero() {
           <h2>Me chamo Matheus</h2>
         </TextContainer>
         <InfosContainer>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="comment">// Minha apresentação</span>
             <span className="purple">Infos </span>
             {'\u007B'}

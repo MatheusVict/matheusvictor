@@ -8,7 +8,7 @@ interface ProjectBannerProps {
 
 export function ProjectBanner({ title, type, imgUrl }: ProjectBannerProps) {
   return (
-    <Container imgUrl={imgUrl}>
+    <Container imgUrl={imgUrl} data-aos="fade-right">
       <div className="overlay" />
       <section>
         <h1>{title}</h1>

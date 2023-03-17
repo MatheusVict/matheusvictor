@@ -17,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
     justify-content: flex-start;
     border-radius: 0.5rem;
     border: 1px solid ${({ theme }) => theme.border};
-    transition: 0.5s;
+    transition: 0.5s !important;
     cursor: pointer;
     overflow: hidden;
 

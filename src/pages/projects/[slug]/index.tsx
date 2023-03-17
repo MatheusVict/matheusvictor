@@ -1,12 +1,15 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import * as Prismic from '@prismicio/client';
 import { useRouter } from 'next/router';
+import Aos from 'aos';
+import { useEffect } from 'react';
 import { Header } from '../../../components/Header';
 import { ProjectBanner } from '../../../components/ProjectBanner';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
 import { createClient } from '../../../services/prismicio';
 import { IProject } from '../../../types/Projects.interface';
 import { LoadingScreen } from '../../../components/LoadingScreen';
+import 'aos/dist/aos.css';
 
 interface ProjectProps {
   project: IProject;
@@ -19,6 +22,10 @@ export default function Project({ project }: ProjectProps) {
     return <LoadingScreen />;
   }
 
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   return (
     <ProjectContainer>
       <Header />
@@ -28,7 +35,7 @@ export default function Project({ project }: ProjectProps) {
         imgUrl={project.thumbnail}
       />
 
-      <main>
+      <main data-aos="fade-up">
         <p>{project.description}</p>
         <button type="button">
           <a href={project.link}>Ver Projeto online</a>

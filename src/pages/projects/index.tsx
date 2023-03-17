@@ -1,18 +1,25 @@
 import { GetStaticProps } from 'next';
 import * as Prismic from '@prismicio/client';
+import { useEffect } from 'react';
+import Aos from 'aos';
 import { Header } from '../../components/Header';
 import { ProjectItem } from '../../components/ProjectItem';
 import { ProjectsContainer } from '../../styles/ProjectsContainer';
 import { createClient } from '../../services/prismicio';
 import { IProject } from '../../types/Projects.interface';
+import 'aos/dist/aos.css';
 
 interface ProjectsProps {
   projects: IProject[];
 }
 
 export default function Projects({ projects }: ProjectsProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   return (
-    <ProjectsContainer>
+    <ProjectsContainer data-aos="zoom-out-right">
       <Header />
       <main className="container">
         {projects.map(project => (

@@ -1,33 +1,90 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
+import * as Prismic from '@prismicio/client';
+import { useRouter } from 'next/router';
 import { Header } from '../../../components/Header';
 import { ProjectBanner } from '../../../components/ProjectBanner';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
+import { createClient } from '../../../services/prismicio';
+import { IProject } from '../../../types/Projects.interface';
+import { LoadingScreen } from '../../../components/LoadingScreen';
 
-export default function Project() {
+interface ProjectProps {
+  project: IProject;
+}
+
+export default function Project({ project }: ProjectProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <LoadingScreen />;
+  }
+
   return (
     <ProjectContainer>
       <Header />
       <ProjectBanner
-        title="Project 01"
-        type="WebSite"
-        imgUrl="https://e0.pxfuel.com/wallpapers/245/340/desktop-wallpaper-ryuko-matoi-kill-la-kill.jpg"
+        title={project.title}
+        type={project.title}
+        imgUrl={project.thumbnail}
       />
 
       <main>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          officiis est dignissimos magni debitis pariatur quaerat, quos officia
-          nemo, molestiae maxime eveniet obcaecati aliquam exercitationem fuga
-          animi impedit voluptate. Beatae laborum ab sapiente repellat maiores
-          voluptas facere odit? Magnam, quam in temporibus quae reprehenderit,
-          odit vel quod dicta nisi non minima tempora! Cumque dicta vitae labore
-          ut officiis veritatis facilis ipsa facere error obcaecati numquam
-          dignissimos repudiandae inventore, nesciunt doloremque voluptate
-          expedita sed aliquam itaque doloribus? Cum asperiores laborum libero.
-        </p>
+        <p>{project.description}</p>
         <button type="button">
-          <a href="">Ver Projeto online</a>
+          <a href={project.link}>Ver Projeto online</a>
         </button>
       </main>
     </ProjectContainer>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prismicClient = createClient({
+    accessToken: process.env.PRISMIC_TOKEN
+  });
+
+  const projectsResponse = await prismicClient.query(
+    Prismic.predicate.at('document.type', 'portfolio')
+  );
+
+  const paths = projectsResponse.results.map(proj => ({
+    params: {
+      slug: proj.uid
+    }
+  }));
+
+  return {
+    paths,
+    fallback: true
+  };
+};
+
+export const getStaticProps: GetStaticProps = async context => {
+  const prismicClient = createClient({
+    accessToken: process.env.PRISMIC_TOKEN
+  });
+
+  const { slug } = context.params;
+
+  const projectResponse = await prismicClient.getByUID(
+    'portfolio',
+    String(slug),
+    {}
+  );
+
+  const project = {
+    slug: projectResponse.uid,
+    title: projectResponse.data.title,
+    type: projectResponse.data.type,
+    description: projectResponse.data.description,
+    link: projectResponse.data.online_project.url,
+    thumbnail: projectResponse.data.thumbnail.url
+  };
+
+  return {
+    props: {
+      project
+    },
+    revalidate: 86400
+  };
+};

@@ -1,3 +1,5 @@
+import { GetStaticProps } from 'next';
+import * as Prismic from '@prismicio/client';
 import { HomeContainer } from '../styles/HomeStyles';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
@@ -6,15 +8,21 @@ import { Projects } from '../components/Projects';
 import { Knowledge } from '../components/Knowledge';
 import { ContactForm } from '../components/ContactForm';
 import { Footer } from '../components/Footer';
+import { createClient } from '../services/prismicio';
+import { IProject } from '../types/Projects.interface';
 
-export default function Home() {
+interface HomeProps {
+  projects: IProject[];
+}
+
+export default function Home({ projects }: HomeProps) {
   return (
     <HomeContainer>
       <Header />
       <main className="container">
         <HomeHero />
         <Experiences />
-        <Projects />
+        <Projects projects={projects} />
         <Knowledge />
         <ContactForm />
       </main>
@@ -22,3 +30,29 @@ export default function Home() {
     </HomeContainer>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismicClient = createClient({
+    accessToken: process.env.PRISMIC_TOKEN
+  });
+
+  const projectsResponse = await prismicClient.query(
+    Prismic.predicate.at('document.type', 'portfolio')
+  );
+  const projects = projectsResponse.results.map(proj => ({
+    slug: proj.uid,
+    title: proj.data.title,
+    type: proj.data.type,
+    description: proj.data.description,
+    link: proj.url,
+    thumbnail: proj.data.thumbnail.url,
+    online_project: proj.data.online_project.url
+  }));
+
+  return {
+    props: {
+      projects
+    },
+    revalidate: 86400
+  };
+};

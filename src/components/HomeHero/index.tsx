@@ -23,13 +23,13 @@ export function HomeHero() {
             {'\u007D'}
           </CodeItem>
           <CodeItem>
-            <span className="purple">Cargo </span>
+            <span className="purple">Oque eu faço </span>
             {'\u007B'}
             <div>
               Função: <span className="blue">Dev Full-stack,</span>
             </div>
             <div>
-              Empresa: <span className="blue">Google</span>
+              Atualmente: <span className="blue">Estudando</span>
             </div>
             {'\u007D'}
           </CodeItem>

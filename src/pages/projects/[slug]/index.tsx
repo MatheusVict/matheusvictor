@@ -41,7 +41,7 @@ export default function Project({ project }: ProjectProps) {
       </Head>
       <ProjectBanner
         title={project.title}
-        type={project.title}
+        type={project.type}
         imgUrl={project.thumbnail}
       />
 

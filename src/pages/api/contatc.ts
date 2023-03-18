@@ -1,16 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
-import * as sendgridTrasnport from 'nodemailer-sendgrid-transport';
+/* import * as sendgridTrasnport from 'nodemailer-sendgrid-transport'; */
 
 const email = process.env.MAIL_ADRESS;
 
-const transport = nodemailer.createTransport(
-  sendgridTrasnport({
-    auth: {
-      api_key: process.env.SEND_GRID_API_KEY
-    }
-  })
-);
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { name, SendMail, content } = req.body;
@@ -19,11 +12,25 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(403).send('');
     }
 
+    const transport = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: email,
+        pass: process.env.TOKEN_GMAIL
+      }
+    });
+
     const message = {
       from: email,
-      to: 'matheusvictorhenrique@gamil.com',
-      subject: `Nova menssage ${name}`,
-      html: `<p><b>Email:</b> ${SendMail}<br /> <b>Menssagem: </b> ${content}</p>`,
+      to: email,
+      subject: `Nova menssagem do Portfolio de - ${name}`,
+      html: `
+      <h1>Chegou um Email do seu portfolio</h1>
+      <h2><b>Email do remetente:</b> ${SendMail}</h2>
+      <h2><b>Menssagem: </b> ${content}</h2>
+      `,
       replyTo: SendMail
     };
     await transport.sendMail(message);

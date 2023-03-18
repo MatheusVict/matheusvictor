@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import * as Prismic from '@prismicio/client';
 import { useEffect } from 'react';
 import Aos from 'aos';
+import Head from 'next/head';
 import { Header } from '../../components/Header';
 import { ProjectItem } from '../../components/ProjectItem';
 import { ProjectsContainer } from '../../styles/ProjectsContainer';
@@ -20,6 +21,31 @@ export default function Projects({ projects }: ProjectsProps) {
 
   return (
     <ProjectsContainer data-aos="zoom-out-right">
+      <Head>
+        <title>Projetos | Matheus Victor</title>
+        <meta
+          name="description"
+          content="
+          Olá sou Matheus Victor Henrique da Silva
+          Está é minha página de projetos,
+          onde utilizo os mais diversos projetos tanto no Back-End quanto no Front-End.
+          Possui as mais diversas tecnologias seja de desenvolvimento web (web development),
+          machine learning,
+          mobile, dentre outros
+          "
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="
+          Olá, sou Matheus Vicor, sou desenvolvedor Full-stack,
+          Este é a página de projetos do meu Portfolio!
+          "
+        />
+      </Head>
       <Header />
       <main className="container">
         {projects.map(project => (

@@ -5,7 +5,7 @@ import { Container } from './styles';
 export function Experiences() {
   return (
     <Container>
-      <SectionTitle title="1 mês" description="de experiência" />
+      <SectionTitle title="2 meses" description="de experiência" />
 
       <section>
         <ExperiencesItems
@@ -15,10 +15,10 @@ export function Experiences() {
           Atuei como
           desenvolvedor full-stack,
           atuei nas construção de uma aplicação voltada
-          para o gerenciamento de whatsapp, onde era responsável
-          pela criação do Front com Reactjs e o Back-End com Nodejs
-          e com MongoDB Atlas,
-          utilizando os melhores padrões de código e de projeto
+          para o gerenciamento e automação de whatsapp, onde era responsável
+          pela criação do Front-End com Reactjs e o Back-End com Nodejs
+          e com MongoDB, além de, fazer a integração de APIs externas com internas da empresa.
+          utilizando os melhores padrões de código e de projeto e documentação.
           "
         />
       </section>

@@ -1,5 +1,10 @@
 import { TbBrandNextjs } from 'react-icons/tb';
-import { SiNestjs, SiTypescript, SiPython, SiKotlin } from 'react-icons/si';
+import {
+  SiNestjs,
+  SiTypescript,
+  SiLinux,
+  SiAndroidstudio
+} from 'react-icons/si';
 import { SectionTitle } from '../SectionTitle';
 import { KnowledgeItem } from './KnowledgeItem';
 import { Container } from './styles';
@@ -12,8 +17,8 @@ export function Knowledge() {
         <KnowledgeItem title="Next Js" icon={<TbBrandNextjs />} />
         <KnowledgeItem title="Nest Js" icon={<SiNestjs />} />
         <KnowledgeItem title="Typescript" icon={<SiTypescript />} />
-        <KnowledgeItem title="kotlin" icon={<SiKotlin />} />
-        <KnowledgeItem title="Python" icon={<SiPython />} />
+        <KnowledgeItem title="Android studio" icon={<SiAndroidstudio />} />
+        <KnowledgeItem title="Linux" icon={<SiLinux />} />
       </section>
     </Container>
   );

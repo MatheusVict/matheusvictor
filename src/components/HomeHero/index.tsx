@@ -3,7 +3,7 @@ import { CodeItem, Container, InfosContainer, TextContainer } from './styles';
 export function HomeHero() {
   return (
     <Container data-aos="fade-up">
-      <img src="/pessoa.webp" alt="minha foto" />
+      <img src="/mypic.png" alt="minha foto" />
       <div>
         <TextContainer>
           <h1>Olá</h1>

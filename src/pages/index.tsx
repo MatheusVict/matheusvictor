@@ -68,15 +68,21 @@ export const getStaticProps: GetStaticProps = async () => {
   const projectsResponse = await prismicClient.query(
     Prismic.predicate.at('document.type', 'portfolio')
   );
-  const projects = projectsResponse.results.map(proj => ({
-    slug: proj.uid,
-    title: proj.data.title,
-    type: proj.data.type,
-    description: proj.data.description,
-    link: proj.url,
-    thumbnail: proj.data.thumbnail.url,
-    online_project: proj.data.online_project.url
-  }));
+  const projects = projectsResponse.results
+    .sort((a, b) => {
+      const dateA = new Date(a.first_publication_date);
+      const dateB = new Date(b.first_publication_date);
+      return dateB.getTime() - dateA.getTime();
+    })
+    .map(proj => ({
+      slug: proj.uid,
+      title: proj.data.title,
+      type: proj.data.type,
+      description: proj.data.description,
+      link: proj.url,
+      thumbnail: proj.data.thumbnail.url,
+      online_project: proj.data.online_project.url
+    }));
 
   return {
     props: {

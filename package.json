@@ -27,6 +27,8 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.8.0",
+    "sendinblue-api": "^1.0.8",
+    "sib-api-v3-sdk": "^8.5.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {

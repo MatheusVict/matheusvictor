@@ -35,7 +35,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     };
     await transport.sendMail(message);
 
-    return res.send('');
+    return res.json({
+      error: false,
+      message: 'fooi'
+    });
   } catch (error) {
     return res.json({
       error: true,

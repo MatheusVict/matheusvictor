@@ -12,7 +12,7 @@ export const sendContactMail = async (
   };
 
   try {
-    return await axios.post(`http://localhost:3000/api/contatc`, data);
+    return await axios.post(`${process.env.URL}/api/contatc`, data);
   } catch (error) {
     return error;
   }

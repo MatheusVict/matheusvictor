@@ -1,43 +1,43 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-/* import * as sendgridTrasnport from 'nodemailer-sendgrid-transport'; */
+import { Resend } from 'resend';
+import cors from 'cors';
+import { EmailTemplate } from '../../components/EmailTemplate/EmailTemplate';
 
 const email = process.env.MAIL_ADRESS;
+const resend = new Resend(process.env.RESEND_KEY);
+
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
+};
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    await new Promise<void>((resolve, reject) => {
+      // eslint-disable-next-line consistent-return
+      cors(corsOptions)(req, res, err => {
+        if (err) return reject(err);
+        resolve();
+      });
+    });
     const { name, SendMail, content } = req.body;
 
     if (!name.trim() || !SendMail.trim() || !content.trim()) {
       return res.status(403).send('');
     }
 
-    const transport = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: {
-        user: email,
-        pass: process.env.TOKEN_GMAIL
-      }
-    });
-
-    const message = {
-      from: email,
+    const data = await resend.sendEmail({
+      from: 'onboarding@resend.dev',
       to: email,
-      subject: `Nova menssagem do Portfolio de - ${name}`,
-      html: `
-      <h1>Chegou um Email do seu portfolio</h1>
-      <h2><b>Email do remetente:</b> ${SendMail}</h2>
-      <h2><b>Menssagem: </b> ${content}</h2>
-      `,
-      replyTo: SendMail
-    };
-    await transport.sendMail(message);
+      subject: 'Email do seu Portfolio',
+      react: EmailTemplate({ name, content, sender: SendMail }),
+      reply_to: SendMail
+    });
 
     return res.json({
       error: false,
-      message: 'fooi'
+      message: data
     });
   } catch (error) {
     return res.json({

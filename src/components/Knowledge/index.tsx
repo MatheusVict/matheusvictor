@@ -1,4 +1,3 @@
-import { TbBrandNextjs } from 'react-icons/tb';
 import {
   SiNestjs,
   SiTypescript,

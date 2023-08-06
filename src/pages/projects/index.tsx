@@ -67,8 +67,11 @@ export const getStaticProps: GetStaticProps = async () => {
     accessToken: process.env.PRISMIC_TOKEN
   });
 
+  const page = 1;
+
   const projectsResponse = await prismicClient.query(
-    Prismic.predicate.at('document.type', 'portfolio')
+    Prismic.predicate.at('document.type', 'portfolio'),
+    { page, pageSize: 100 }
   );
 
   const projects = projectsResponse.results

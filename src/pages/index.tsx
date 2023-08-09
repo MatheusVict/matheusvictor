@@ -30,22 +30,83 @@ export default function Home({ projects }: HomeProps) {
         <title>Home | Matheus Victor</title>
         <meta
           name="description"
-          content="
-          Olá sou Matheus Victor Henrique da Silva.
-          Sou desenvolvedor
-          Full-stack e este é o meu portfolio. Sou focado em tecnologias como:
-          javaScript Typescript, NextJs, NestJs, React, Node, Go, Kotlin,Html, css,
-          Docker, Linux dentre outras
-          "
+          content="Sou um Desenvolvedor Full-stack com
+          expertise em diversas tecnologias, incluindo Java, Spring,
+          JavaScript, TypeScript, Next.js, Nest.js, React, Node, Go, Kotlin, HTML, CSS, Docker e
+          Linux. Transformo ideias em soluções digitais robustas e inovadoras."
         />
+
         <meta property="og:image" content="/ogimage.png" />
-        <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
+
+        <meta
+          property="og:title"
+          content="Matheus Victor - Desenvolvedor Full-stack"
+        />
+        <meta
+          name="twitter:title"
+          content="Matheus Victor - Desenvolvedor Full-stack"
+        />
+
+        <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image:src" content="/ogimage.png" />
+
         <meta
           property="og:description"
-          content="Olá, sou Matheus Vicor, sou desenvolvedor Full-stack, Este é o meu Portfolio!"
+          content="Desenvolvedor Freelancer Full-stack - Conheça o meu portfólio!"
         />
+        <meta
+          property="twitter:description"
+          content="Desenvolvedor Freelancer Full-stack - Conheça o meu portfólio!"
+        />
+
+        <meta
+          name="keywords"
+          content="desenvolvedor full-stack, tecnologias, portfolio, web development"
+        />
+
+        <meta name="author" content="Matheus Victor Henrique da Silva" />
+
+        <meta name="language" content="pt-BR" />
+
+        <meta property="og:type" content="website" />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta
+          name="twitter:image:alt"
+          content="Imagem que apresenta meu portfólio"
+        />
+
+        <meta
+          name="googlebot"
+          content="desenvolvedor full-stack, tecnologias, portfolio, web development"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:url"
+          content="https://portfolio-kappa-ten-20.vercel.app"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'http://schema.org',
+            '@type': 'Person',
+            name: 'Matheus Victor Henrique da Silva',
+            jobTitle: 'Desenvolvedor Full-stack',
+            url: 'https://portfolio-kappa-ten-20.vercel.app',
+            image: '/mypic.png',
+            sameAs: [
+              'https://github.com/MatheusVict',
+              'https://www.linkedin.com/in/matheus-victor-henrique',
+              'https://gitlab.com/MatheusVict'
+            ]
+          })}
+        </script>
       </Head>
       <Header />
       <main className="container">

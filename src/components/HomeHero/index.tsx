@@ -29,7 +29,7 @@ export function HomeHero() {
               Função: <span className="blue">Dev Full-stack,</span>
             </div>
             <div>
-              Atualmente: <span className="blue">Estudando</span>
+              Atualmente: <span className="blue">Freelancer</span>
             </div>
             {'\u007D'}
           </CodeItem>

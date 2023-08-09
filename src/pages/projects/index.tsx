@@ -25,14 +25,11 @@ export default function Projects({ projects }: ProjectsProps) {
         <title>Projetos | Matheus Victor</title>
         <meta
           name="description"
-          content="
-          Olá sou Matheus Victor Henrique da Silva
-          Está é minha página de projetos,
-          onde utilizo os mais diversos projetos tanto no Back-End quanto no Front-End.
-          Possui as mais diversas tecnologias seja de desenvolvimento web (web development),
-          machine learning,
-          mobile, dentre outros
-          "
+          content="Olá! Eu sou Matheus Victor Henrique da Silva,
+          e esta é a minha página de projetos. Aqui, você encontrará
+          uma variedade de projetos, abrangendo tanto o Back-End quanto o
+          Front-End. Exploro diversas tecnologias, incluindo desenvolvimento web,
+          machine learning e mobile. Venha explorar meu portfólio!"
         />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -40,10 +37,10 @@ export default function Projects({ projects }: ProjectsProps) {
         <meta name="twitter:image:src" content="/ogimage.png" />
         <meta
           property="og:description"
-          content="
-          Olá, sou Matheus Vicor, sou desenvolvedor Full-stack,
-          Este é a página de projetos do meu Portfolio!
-          "
+          content="Olá! Eu sou Matheus Victor, um desenvolvedor Full-stack.
+          Bem-vindo à minha página de projetos do meu portfólio! Aqui,
+          você encontrará uma coleção de projetos que demonstram
+          minhas habilidades e experiência."
         />
       </Head>
       <Header />

@@ -25,15 +25,14 @@ export function Experiences() {
           year="2023"
           title="Desenvolvedor full-stack"
           description="
-          Atuo como desenvolvedor freelancer, criando aplicações web e
-          mobile com tecnologias modernas, como Spring Boot, Node.js, React e Android nativo.
-          Minha missão é entregar soluções sólidas e eficazes para atender às demandas do seu negócio.
-          Tenho experiência em projetos variados, desde Landing Pages até sistemas de gerenciamento de
-          estoque e aplicativos de adoção de animais. Além disso, também dedico parte do meu tempo como
-          desenvolvedor voluntário para a ONG dos Escoteiros.
-          Minha abordagem é focada em compreender suas necessidades e fornecer soluções tecnológicas que
-          façam a diferença. Estou comprometido em entregar resultados de qualidade que agreguem valor ao
-          seu negócio.
+          Sou um desenvolvedor freelancer
+          especializado na criação de aplicações web e mobile usando tecnologias
+          modernas como Spring Boot, Node.js, Nest.js, React e Android nativo. Minha paixão é
+          transformar ideias em soluções tecnológicas impactantes. Com experiência em diversos
+          projetos, desde Landing Pages até sistemas de gerenciamento e apps de adoção de animais,
+          estou comprometido em fornecer resultados de qualidade que agreguem valor aos negócios.
+          Também dedico parte do meu tempo como desenvolvedor voluntário para ONGs, unindo minha
+          habilidade técnica ao propósito de fazer a diferença.
           "
         />
       </section>

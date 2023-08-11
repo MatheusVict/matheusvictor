@@ -1,4 +1,9 @@
-import { AiOutlineGithub, AiFillLinkedin, AiFillGitlab } from 'react-icons/ai';
+import {
+  AiOutlineGithub,
+  AiFillLinkedin,
+  AiFillGitlab,
+  AiOutlineWhatsApp
+} from 'react-icons/ai';
 import { Container } from './styles';
 
 export function Footer() {
@@ -32,6 +37,9 @@ export function Footer() {
           />
           <AiFillGitlab
             onClick={() => handleRedirect('https://gitlab.com/MatheusVict')}
+          />
+          <AiOutlineWhatsApp
+            onClick={() => handleRedirect('https://wa.me/5581989520362')}
           />
         </section>
       </div>

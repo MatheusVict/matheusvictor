@@ -12,24 +12,24 @@ export function HomeHero() {
         <InfosContainer>
           <CodeItem data-aos="zoom-in">
             <span className="comment">// Minha apresentação</span>
-            <span className="purple">Infos </span>
+            <span className="purple">Oque eu faço </span>
+            {'\u007B'}
+            <div>
+              Função: <span className="blue">Dev Full-stack</span>
+            </div>
+            <div>
+              Atualmente: <span className="blue">Freelancer</span>
+            </div>
+            {'\u007D'}
+          </CodeItem>
+          <CodeItem>
+            <span className="purple">quem eu sou </span>
             {'\u007B'}
             <div>
               Nome: <span className="blue">Matheus,</span>
             </div>
             <div>
               Sobrenome: <span className="blue">Victor</span>
-            </div>
-            {'\u007D'}
-          </CodeItem>
-          <CodeItem>
-            <span className="purple">Oque eu faço </span>
-            {'\u007B'}
-            <div>
-              Função: <span className="blue">Dev Full-stack,</span>
-            </div>
-            <div>
-              Atualmente: <span className="blue">Freelancer</span>
             </div>
             {'\u007D'}
           </CodeItem>

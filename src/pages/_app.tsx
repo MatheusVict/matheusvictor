@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import NextNProgress from 'nextjs-progressbar';
 
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/react';
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Toaster position="bottom-right" />
       <Component {...pageProps} />
+      <Analytics />
       <GlobalStyles />
     </ThemeProvider>
   );

@@ -1,9 +1,4 @@
-import {
-  SiNestjs,
-  SiAngular,
-  SiAndroidstudio,
-  SiSpring
-} from 'react-icons/si';
+import { SiNestjs, SiAngular, SiAndroidstudio, SiSpring } from 'react-icons/si';
 import { FaReact, FaJava } from 'react-icons/fa';
 import { SectionTitle } from '../SectionTitle';
 import { KnowledgeItem } from './KnowledgeItem';

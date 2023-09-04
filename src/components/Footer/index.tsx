@@ -36,7 +36,9 @@ export function Footer() {
             }
           />
           <AiFillYoutube
-            onClick={() => handleRedirect('https://www.youtube.com/@matheusvictorhenrique')}
+            onClick={() =>
+              handleRedirect('https://www.youtube.com/@matheusvictorhenrique')
+            }
           />
           <AiOutlineWhatsApp
             onClick={() => handleRedirect('https://wa.me/5581989520362')}

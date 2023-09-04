@@ -5,7 +5,7 @@ import { Container } from './styles';
 export function Experiences() {
   return (
     <Container>
-      <SectionTitle title="7 meses" description="de experiência" />
+      <SectionTitle title="1 ano e 5 meses" description="de experiência" />
 
       <section>
         <ExperiencesItems
@@ -25,14 +25,16 @@ export function Experiences() {
           year="2023"
           title="Desenvolvedor full-stack"
           description="
-          Sou um desenvolvedor freelancer
-          especializado na criação de aplicações web e mobile usando tecnologias
-          modernas como Spring Boot, Node.js, Nest.js, React e Android nativo. Minha paixão é
-          transformar ideias em soluções tecnológicas impactantes. Com experiência em diversos
-          projetos, desde Landing Pages até sistemas de gerenciamento e apps de adoção de animais,
-          estou comprometido em fornecer resultados de qualidade que agreguem valor aos negócios.
-          Também dedico parte do meu tempo como desenvolvedor voluntário para ONGs, unindo minha
-          habilidade técnica ao propósito de fazer a diferença.
+          Sou um desenvolvedor freelancer full-stack 
+          com foco em aplicações web e mobile. 
+          Minha expertise abrange tecnologias modernas, 
+          como Spring Boot, Node.js, React e Android nativo. 
+          Também uso metodologias ágeis para garantir a qualidade da entrega.
+          Além de possuir ampla experiência em diversos projetos, desde sistemas 
+          administrativos personalizados até aplicativos Android. 
+          Além disso, dedico parte do meu tempo como desenvolvedor 
+          voluntário para ONGs, combinando minhas habilidades técnicas 
+          com um propósito de impacto social.
           "
         />
       </section>

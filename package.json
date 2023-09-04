@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "prettier --write '**/*.{js,jsx,ts,tsx}' && eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 import {
   AiOutlineGithub,
   AiFillLinkedin,
-  AiFillGitlab,
+  AiFillYoutube,
   AiOutlineWhatsApp
 } from 'react-icons/ai';
 import { Container } from './styles';
@@ -35,8 +35,8 @@ export function Footer() {
               )
             }
           />
-          <AiFillGitlab
-            onClick={() => handleRedirect('https://gitlab.com/MatheusVict')}
+          <AiFillYoutube
+            onClick={() => handleRedirect('https://www.youtube.com/@matheusvictorhenrique')}
           />
           <AiOutlineWhatsApp
             onClick={() => handleRedirect('https://wa.me/5581989520362')}

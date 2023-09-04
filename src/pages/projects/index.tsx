@@ -26,7 +26,7 @@ export default function Projects({ projects }: ProjectsProps) {
         <meta
           name="description"
           content="Olá! Eu sou Matheus Victor Henrique da Silva,
-          e esta é a minha página de projetos. Aqui, você encontrará
+          e esta é dioa minha página de projetos. Aqui, você encontrará
           uma variedade de projetos, abrangendo tanto o Back-End quanto o
           Front-End. Exploro diversas tecnologias, incluindo desenvolvimento web,
           machine learning e mobile. Venha explorar meu portfólio!"
@@ -68,7 +68,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const projectsResponse = await prismicClient.query(
     Prismic.predicate.at('document.type', 'portfolio'),
-    { page, pageSize: 100 }
+    { page, pageSize: 50 }
   );
 
   const projects = projectsResponse.results

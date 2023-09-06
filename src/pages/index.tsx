@@ -35,9 +35,6 @@ export default function Home({ projects }: HomeProps) {
           React, Node.js, Go e Docker. Trabalhe comigo para tornar sua visão digital realidade!"
         />
 
-
-
-
         <meta property="og:image" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
 
@@ -96,22 +93,25 @@ export default function Home({ projects }: HomeProps) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'http://schema.org',
-            '@type': 'Person',
-            'name': 'Matheus Victor Henrique da Silva',
-            'jobTitle': 'Desenvolvedor Full-stack',
-            'url': 'https://portfolio-kappa-ten-20.vercel.app',
-            'image': '/mypic.png',
-            'sameAs': [
-              'https://github.com/MatheusVict',
-              'https://www.linkedin.com/in/matheus-victor-henrique',
-              'https://gitlab.com/MatheusVict',
-              'https://www.youtube.com/@matheusvictorhenrique'
-            ]
-          })}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'http://schema.org',
+              '@type': 'Person',
+              name: 'Matheus Victor Henrique da Silva',
+              jobTitle: 'Desenvolvedor Full-stack',
+              url: 'https://portfolio-kappa-ten-20.vercel.app',
+              image: '/mypic.png',
+              sameAs: [
+                'https://github.com/MatheusVict',
+                'https://www.linkedin.com/in/matheus-victor-henrique',
+                'https://gitlab.com/MatheusVict',
+                'https://www.youtube.com/@matheusvictorhenrique'
+              ]
+            })
+          }}
+        />
       </Head>
       <Header />
       <main className="container">

@@ -97,19 +97,19 @@ export default function Home({ projects }: HomeProps) {
 
         <script type="application/ld+json">
           {JSON.stringify({
-            '@context': 'http://schema.org',
-            '@type': 'Person',
-            name: 'Matheus Victor Henrique da Silva',
-            jobTitle: 'Desenvolvedor Full-stack',
-            url: 'https://portfolio-kappa-ten-20.vercel.app',
-            image: '/mypic.png',
-            sameAs: [
-              'https://github.com/MatheusVict',
-              'https://www.linkedin.com/in/matheus-victor-henrique',
-              'https://gitlab.com/MatheusVict',
-              'https://www.youtube.com/@matheusvictorhenrique'
-            ]
-          })}
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Matheus Victor Henrique da Silva",
+          "jobTitle": "Desenvolvedor Full-stack",
+          "url": "https://portfolio-kappa-ten-20.vercel.app",
+          "image": "/mypic.png",
+          "sameAs": [
+            "https://github.com/MatheusVict",
+            "https://www.linkedin.com/in/matheus-victor-henrique",
+            "https://gitlab.com/MatheusVict",
+            "https://www.youtube.com/@matheusvictorhenrique"
+          ]
+        })}
         </script>
       </Head>
       <Header />

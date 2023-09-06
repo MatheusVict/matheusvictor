@@ -30,12 +30,13 @@ export default function Home({ projects }: HomeProps) {
         <title>Home | Matheus Victor</title>
         <meta
           name="description"
-          content="Sou um Desenvolvedor Full-stack com
-          expertise em diversas tecnologias, incluindo Java, Spring,
-          JavaScript, TypeScript, NextJs, 
-          NestJs, ReacsJS, NodeJs, Golang, Kotlin, Android nativo, Docker e
-          Linux. Transformo ideias em soluções digitais robustas e inovadoras."
+          content="Desenvolvedor Full-stack apaixonado por transformar códigos em soluções 
+          incríveis. Especialista em Java, Spring, Kotlin, Android, TypeScript, Next.js, Nest.js, 
+          React, Node.js, Go e Docker. Trabalhe comigo para tornar sua visão digital realidade!"
         />
+
+
+
 
         <meta property="og:image" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
@@ -99,11 +100,11 @@ export default function Home({ projects }: HomeProps) {
           {JSON.stringify({
             '@context': 'http://schema.org',
             '@type': 'Person',
-            name: 'Matheus Victor Henrique da Silva',
-            jobTitle: 'Desenvolvedor Full-stack',
-            url: 'https://portfolio-kappa-ten-20.vercel.app',
-            image: '/mypic.png',
-            sameAs: [
+            'name': 'Matheus Victor Henrique da Silva',
+            'jobTitle': 'Desenvolvedor Full-stack',
+            'url': 'https://portfolio-kappa-ten-20.vercel.app',
+            'image': '/mypic.png',
+            'sameAs': [
               'https://github.com/MatheusVict',
               'https://www.linkedin.com/in/matheus-victor-henrique',
               'https://gitlab.com/MatheusVict',

@@ -32,7 +32,8 @@ export default function Home({ projects }: HomeProps) {
           name="description"
           content="Sou um Desenvolvedor Full-stack com
           expertise em diversas tecnologias, incluindo Java, Spring,
-          JavaScript, TypeScript, Next.js, Nest.js, React, Node, Go, Kotlin, HTML, CSS, Docker e
+          JavaScript, TypeScript, NextJs, 
+          NestJs, ReacsJS, NodeJs, Golang, Kotlin, Android nativo, Docker e
           Linux. Transformo ideias em soluções digitais robustas e inovadoras."
         />
 
@@ -62,7 +63,7 @@ export default function Home({ projects }: HomeProps) {
 
         <meta
           name="keywords"
-          content="desenvolvedor full-stack, tecnologias, portfolio, web development"
+          content="desenvolvedor full-stack, tecnologias, portfolio, web development, android development"
         />
 
         <meta name="author" content="Matheus Victor Henrique da Silva" />
@@ -82,6 +83,8 @@ export default function Home({ projects }: HomeProps) {
           name="googlebot"
           content="desenvolvedor full-stack, tecnologias, portfolio, web development"
         />
+
+        <meta name="robots" content="index, follow"/>
 
         <meta name="twitter:card" content="summary_large_image" />
 
@@ -103,7 +106,8 @@ export default function Home({ projects }: HomeProps) {
             sameAs: [
               'https://github.com/MatheusVict',
               'https://www.linkedin.com/in/matheus-victor-henrique',
-              'https://gitlab.com/MatheusVict'
+              'https://gitlab.com/MatheusVict',
+              'https://www.youtube.com/@matheusvictorhenrique'
             ]
           })}
         </script>

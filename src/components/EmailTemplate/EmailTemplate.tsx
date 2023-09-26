@@ -35,8 +35,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 
       <p>{content}</p>
 
-      <a
-        href={`emailto:${sender}`}
+      <p
         style={{
           display: 'inline-block',
           backgroundColor: '#ff9900',
@@ -47,8 +46,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           marginTop: '20px'
         }}
       >
-        Clique aqui
-      </a>
+        sender: {sender}
+      </p>
     </div>
 
     <div

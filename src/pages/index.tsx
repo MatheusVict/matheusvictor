@@ -30,8 +30,8 @@ export default function Home({ projects }: HomeProps) {
         <title>Home | Matheus Victor</title>
         <meta
           name="description"
-          content="Desenvolvedor Full-stack apaixonado por transformar 
-          códigos em soluções incríveis. Especialista em várias tecnologias. 
+          content="Desenvolvedor Full-stack apaixonado por transformar
+          códigos em soluções incríveis. Especialista em várias tecnologias.
           como Java, Spring kotlin, android nativo"
         />
 

@@ -10,6 +10,7 @@ export const Container = styled.section`
     align-items: center;
     justify-content: center;
     gap: 8rem;
+    flex-wrap: wrap;
 
     @media (max-width: 1000px) {
       gap: 5rem;
@@ -17,7 +18,6 @@ export const Container = styled.section`
 
     @media (max-width: 700px) {
       gap: 3rem;
-      flex-wrap: wrap;
       margin-top: 5rem;
     }
   }

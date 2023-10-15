@@ -31,7 +31,7 @@ export function Footer() {
           <AiFillLinkedin
             onClick={() =>
               handleRedirect(
-                'https://www.linkedin.com/in/matheus-victor-henrique-270640236/'
+                'https://www.linkedin.com/in/matheus-victor-henrique/'
               )
             }
           />

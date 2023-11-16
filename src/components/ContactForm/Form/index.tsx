@@ -1,10 +1,12 @@
 import { FormEvent, useState } from 'react';
 import { toast } from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 import { FormContainer, Input, TextArea } from './styles';
 import { sendContactMail } from '../../../services/sendMail';
 import theme from '../../../styles/theme';
 
 export function Form() {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [content, setContent] = useState('');
@@ -31,14 +33,14 @@ export function Form() {
       setEmail('');
       setContent('');
 
-      toast('Mensagem enviada com sucesso', {
+      toast(t('message_sent_success'), {
         style: {
           background: theme.secondary,
           color: '#fff'
         }
       });
     } catch (error) {
-      toast('Ocorreu um erro ao enviar o email', {
+      toast(t('message_sent_error'), {
         style: {
           background: theme.error,
           color: '#fff'
@@ -54,7 +56,7 @@ export function Form() {
       <Input
         value={name}
         onChange={({ target }) => setName(target.value)}
-        placeholder="Nome"
+        placeholder={t('name_placeholder')}
       />
       <Input
         value={email}
@@ -65,10 +67,10 @@ export function Form() {
       <TextArea
         value={content}
         onChange={({ target }) => setContent(target.value)}
-        placeholder="Menssagem"
+        placeholder={t('message_placeholder')}
       />
       <button type="submit" disabled={load}>
-        ENVIAR
+        {t('send_button')}
       </button>
     </FormContainer>
   );

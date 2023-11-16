@@ -1,35 +1,37 @@
+import { useTranslation } from 'react-i18next';
 import { CodeItem, Container, InfosContainer, TextContainer } from './styles';
 
 export function HomeHero() {
+  const { t } = useTranslation();
   return (
     <Container data-aos="fade-up">
       <img src="/mypic.png" alt="minha foto" />
       <div>
         <TextContainer>
-          <h1>Olá</h1>
-          <h2>Me chamo Matheus</h2>
+          <h1>{t('hello')}</h1>
+          <h2>{t('im_called')}</h2>
         </TextContainer>
         <InfosContainer>
           <CodeItem data-aos="zoom-in">
-            <span className="comment">// Minha apresentação</span>
-            <span className="purple">Oque eu faço </span>
+            <span className="comment">// {t('my_apresentation')}</span>
+            <span className="purple">{t('what_i_do')} </span>
             {'\u007B'}
             <div>
-              Função: <span className="blue">Dev Full-stack</span>
+              {t('stack')}: <span className="blue">{t('stack_name')},</span>
             </div>
             <div>
-              Atualmente: <span className="blue">Freelancer</span>
+              {t('currently_working')}: <span className="blue">Freelancer</span>
             </div>
             {'\u007D'}
           </CodeItem>
           <CodeItem>
-            <span className="purple">quem eu sou </span>
+            <span className="purple">{t('who_i_am')} </span>
             {'\u007B'}
             <div>
-              Nome: <span className="blue">Matheus,</span>
+              {t('name')}: <span className="blue">Matheus,</span>
             </div>
             <div>
-              Sobrenome: <span className="blue">Victor</span>
+              {t('last_name')}: <span className="blue">Victor</span>
             </div>
             {'\u007D'}
           </CodeItem>

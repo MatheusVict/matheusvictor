@@ -1,8 +1,12 @@
+/* eslint-disable import/no-absolute-path */
 import { GetStaticProps } from 'next';
 import * as Prismic from '@prismicio/client';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import Head from 'next/head';
+import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import { HomeContainer } from '../styles/HomeStyles';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
@@ -14,10 +18,37 @@ import { Footer } from '../components/Footer';
 import { createClient } from '../services/prismicio';
 import { IProject } from '../types/Projects.interface';
 import 'aos/dist/aos.css';
+import enTranslate from '../../public/locales/en/common.json';
+import ptTranslate from '../../public/locales/pt/common.json';
 
 interface HomeProps {
   projects: IProject[];
 }
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translations: enTranslate
+      },
+      pt: {
+        translations: ptTranslate
+      }
+    },
+
+    ns: ['translations'],
+    defaultNS: 'translations',
+    keySeparator: false,
+    interpolation: {
+      escapeValue: false,
+      formatSeparator: ','
+    },
+    react: {
+      useSuspense: true
+    }
+  });
 
 export default function Home({ projects }: HomeProps) {
   useEffect(() => {

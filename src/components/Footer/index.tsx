@@ -4,9 +4,11 @@ import {
   AiFillYoutube,
   AiOutlineWhatsApp
 } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 import { Container } from './styles';
 
 export function Footer() {
+  const { t } = useTranslation();
   function handleRedirect(url: string) {
     window.open(url);
   }
@@ -22,7 +24,7 @@ export function Footer() {
     <Container>
       <div className="container">
         <button type="button" onClick={handleScrollTop}>
-          Voltar ao topo
+          {t('back_to_top')}
         </button>
         <section>
           <AiOutlineGithub

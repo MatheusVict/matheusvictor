@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components';
+import { appWithTranslation } from 'next-i18next';
 import NextNProgress from 'nextjs-progressbar';
 
 import { Toaster } from 'react-hot-toast';
@@ -24,4 +25,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

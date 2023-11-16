@@ -1,14 +1,16 @@
 import { SiNestjs, SiAndroidstudio, SiSpring, SiKotlin } from 'react-icons/si';
 import { FaReact, FaJava } from 'react-icons/fa';
 import { TbBrandGolang } from 'react-icons/tb';
+import { useTranslation } from 'react-i18next';
 import { SectionTitle } from '../SectionTitle';
 import { KnowledgeItem } from './KnowledgeItem';
 import { Container } from './styles';
 
 export function Knowledge() {
+  const { t } = useTranslation();
   return (
     <Container>
-      <SectionTitle title="Conhecimentos" />
+      <SectionTitle title={t('knowledges')} />
       <section>
         <KnowledgeItem title="Java" icon={<FaJava />} />
         <KnowledgeItem title="Spring" icon={<SiSpring />} />

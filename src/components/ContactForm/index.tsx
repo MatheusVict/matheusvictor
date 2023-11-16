@@ -1,21 +1,21 @@
+import { useTranslation } from 'react-i18next';
 import { Container } from './styles';
 import { SectionTitle } from '../SectionTitle';
 import { Form } from './Form';
 
 export function ContactForm() {
+  const { t } = useTranslation();
   return (
     <Container>
       <SectionTitle
         title={
           <>
-            Precisa dos
+            {t('need_my')}
             <br />
-            meus Serviços?
+            {t('services')}
           </>
         }
-        description={
-          <>Preencha o formulário abaixo que irei retornar em breve</>
-        }
+        description={<>{t('fill_out_form')}</>}
       />
 
       <Form />

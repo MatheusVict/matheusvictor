@@ -1,4 +1,10 @@
-import { SiNestjs, SiAndroidstudio, SiSpring, SiKotlin } from 'react-icons/si';
+import {
+  SiNestjs,
+  SiAndroidstudio,
+  SiSpring,
+  SiKotlin,
+  SiQuarkus
+} from 'react-icons/si';
 import { FaReact, FaJava } from 'react-icons/fa';
 import { TbBrandGolang } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +20,7 @@ export function Knowledge() {
       <section>
         <KnowledgeItem title="Java" icon={<FaJava />} />
         <KnowledgeItem title="Spring" icon={<SiSpring />} />
+        <KnowledgeItem title="Quarkus" icon={<SiQuarkus />} />
         <KnowledgeItem title="Golang" icon={<TbBrandGolang />} />
         <KnowledgeItem title="Nest Js" icon={<SiNestjs />} />
         <KnowledgeItem title="Kotlin" icon={<SiKotlin />} />

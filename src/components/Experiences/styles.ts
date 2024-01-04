@@ -14,6 +14,12 @@ export const Container = styled.section`
       gap: 1rem;
     }
 
+    @media screen and (min-width: 701px) and (max-width: 999px) {
+      flex-direction: column;
+      margin-top: 5rem;
+      gap: rem;
+    }
+
     @media (max-width: 700px) {
       flex-direction: column;
       margin-top: 5rem;

@@ -23,6 +23,11 @@ export function Experiences() {
           title={t('full_stack_developer')}
           description={t('experience_2')}
         />
+        <ExperiencesItems
+          year="2023"
+          title={t('back_end_developer')}
+          description={t('experience_3')}
+        />
       </section>
     </Container>
   );

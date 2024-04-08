@@ -61,9 +61,9 @@ export default function Home({ projects }: HomeProps) {
         <title>Home | Matheus Victor</title>
         <meta
           name="description"
-          content="Desenvolvedor Full-stack apaixonado por transformar
+          content="Desenvolvedor Back End apaixonado por transformar
           códigos em soluções incríveis. Especialista em várias tecnologias.
-          como Java, Spring kotlin, android nativo"
+          como Java, Spring, Quarkus, Angular dentre outros"
         />
 
         <meta property="og:image" content="/ogimage.png" />
@@ -71,11 +71,11 @@ export default function Home({ projects }: HomeProps) {
 
         <meta
           property="og:title"
-          content="Matheus Victor - Desenvolvedor Full-stack"
+          content="Matheus Victor - Desenvolvedor Back End"
         />
         <meta
           name="twitter:title"
-          content="Matheus Victor - Desenvolvedor Full-stack"
+          content="Matheus Victor - Desenvolvedor Back End"
         />
 
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -83,16 +83,16 @@ export default function Home({ projects }: HomeProps) {
 
         <meta
           property="og:description"
-          content="Desenvolvedor Freelancer Full-stack - Conheça o meu portfólio!"
+          content="Desenvolvedor Freelancer Back End - Conheça o meu portfólio!"
         />
         <meta
           property="twitter:description"
-          content="Desenvolvedor Freelancer Full-stack - Conheça o meu portfólio!"
+          content="Desenvolvedor Freelancer Back End - Conheça o meu portfólio!"
         />
 
         <meta
           name="keywords"
-          content="desenvolvedor full-stack, tecnologias, portfolio, web development, android development"
+          content="desenvolvedor Back End, tecnologias, portfolio, web development, Software Engineer"
         />
 
         <meta name="author" content="Matheus Victor Henrique da Silva" />
@@ -110,7 +110,7 @@ export default function Home({ projects }: HomeProps) {
 
         <meta
           name="googlebot"
-          content="desenvolvedor full-stack, tecnologias, portfolio, web development"
+          content="desenvolvedor Back End, tecnologias, portfolio, web development"
         />
 
         <meta name="robots" content="index, follow" />
@@ -131,7 +131,7 @@ export default function Home({ projects }: HomeProps) {
               '@context': 'http://schema.org',
               '@type': 'Person',
               name: 'Matheus Victor Henrique da Silva',
-              jobTitle: 'Desenvolvedor Full-stack',
+              jobTitle: 'Desenvolvedor Back End',
               url: 'https://portfolio-kappa-ten-20.vercel.app',
               image: '/mypic.png',
               sameAs: [

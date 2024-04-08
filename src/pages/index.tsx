@@ -50,6 +50,11 @@ i18n
     }
   });
 
+
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+});
+
 export default function Home({ projects }: HomeProps) {
   useEffect(() => {
     Aos.init({ duration: 1500 });

@@ -1,4 +1,4 @@
-Sitemap: https://portfolio-kappa-ten-20.vercel.app/sitemap.xml
+Sitemap: https://https://matheusvictor.vercel.app/sitemap.xml
 
 User-agent: *
 Disallow:

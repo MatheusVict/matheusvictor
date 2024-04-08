@@ -8,12 +8,14 @@ export function Experiences() {
   const { t } = useTranslation();
 
   const current = new Date();
-  const different= getDifferenceDateInYearsAndMonths(current);
+  const different = getDifferenceDateInYearsAndMonths(current);
 
   return (
     <Container>
       <SectionTitle
-        title={`${different.years} ${t('time_of_experience_years')} ${different.months} ${t('time_of_experience_months')}`}
+        title={`${different.years} ${t('time_of_experience_years')} ${
+          different.months
+        } ${t('time_of_experience_months')}`}
         description={t('experience')}
       />
 

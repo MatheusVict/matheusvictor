@@ -2,13 +2,18 @@ import { useTranslation } from 'react-i18next';
 import { ExperiencesItems } from './ExperiencesItems';
 import { SectionTitle } from '../SectionTitle';
 import { Container } from './styles';
+import { getDifferenceDateInYearsAndMonths } from '../../utils/formatDate';
 
 export function Experiences() {
   const { t } = useTranslation();
+
+  const current = new Date();
+  const different= getDifferenceDateInYearsAndMonths(current);
+
   return (
     <Container>
       <SectionTitle
-        title={t('time_of_experience')}
+        title={`${different.years} ${t('time_of_experience_years')} ${different.months} ${t('time_of_experience_months')}`}
         description={t('experience')}
       />
 
